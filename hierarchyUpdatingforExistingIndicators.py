@@ -65,7 +65,7 @@ def main():
     df_main.drop(['current_hierarchy_num'], axis=1, inplace=True)
 
     final_file = "%s-hierarchy.indicators-final.csv" % date_today
-    df_main.to_csv(final_file, index=False)
+    df_main.to_csv(final_file, index=False, line_terminator='\r')
     print("Updated hierarchy file saved as %s" % final_file)
 
 if __name__ == '__main__':
